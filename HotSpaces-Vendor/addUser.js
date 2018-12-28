@@ -14,6 +14,7 @@ exports.handler = function (event, context, callback) {
         let temp_password = body.temp_password;
         let role = body.role;
         let vendorId = body.vendor_id;
+        
 
         cognito_idp.adminCreateUser({
             UserPoolId: "us-east-1_mcdTV1jKi",
@@ -30,6 +31,12 @@ exports.handler = function (event, context, callback) {
             }, {
                 Name: "phone_number",
                 Value: `${phone_number}`
+            }, {
+                Name: "custom:email_verified",
+                Value: "true"
+            }, {
+                Name: "custom:phone_number_verified",
+                Value: "true"
             }],
             ValidationData: []
         }, function (error, data) {
