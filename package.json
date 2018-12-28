@@ -1,0 +1,12 @@
+{
+  "name": "HotSpaces-Vendor",
+  "version": "1.0.0",
+  "dependencies": {
+    "uuid": "3.3.2",
+    "moment": "2.22.2",
+    "axios": "0.18.0",
+    "node-geocoder": "3.22.0",
+    "mathjs": "5.3.1",
+    "lodash": "4.17.11"
+  }
+}
